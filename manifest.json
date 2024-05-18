@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Chế độ đọc truyện",
+  "version": "1.0",
+  "description": "chế độ đọc truyện cho trang web https://trangquynh-trangquynh.blogspot.com/",
+  "permissions": ["activeTab", "https://trangquynh-trangquynh.blogspot.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://trangquynh-trangquynh.blogspot.com/*"],
+      "js": ["image-modal.js"]
+    }
+  ]
+}
