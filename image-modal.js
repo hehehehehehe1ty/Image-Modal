@@ -215,7 +215,8 @@ function createNextEpisodeLink() {
     nextLink.href = href;
     nextLink.textContent = text;
   } else {
-    nextLink.textContent = 'Không tìm thấy tập tiếp theo';
+    nextLink.textContent = 'Không tìm thấy tập tiếp theo: Xem các tập khác';
+    nextLink.href = "http://trangquynh-trangquynh.blogspot.com/2016/04/truyen-trang-quynh.html";
   }
   addHoverEffect(nextLink, nextLink);
   return nextLink;
