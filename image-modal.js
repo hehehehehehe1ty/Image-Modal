@@ -148,17 +148,19 @@ function openModal(src) {
     const timeSinceLastMove = currentTime - lastMouseMoveTime;
     if (timeSinceLastMove >= 5000) {
       elementsToHide.forEach(element => {
-        element.style.visibility = 'hidden';
+        element.style.opacity = '0';
+        element.style.transition = 'opacity 0.25s ease';
       });
     }
   }
-
+  
   function showHiddenElements() {
     elementsToHide.forEach(element => {
-      element.style.visibility = 'visible';
+      element.style.opacity = '1';
+      element.style.transition = 'opacity 0.25s ease';
     });
   }
-
+  
   hideElementsIfNotMoved();
   setInterval(hideElementsIfNotMoved, 1000);
 
